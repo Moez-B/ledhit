@@ -19,7 +19,7 @@ public class PlayerDamageEventHandler implements Listener {
 	public void onDamageEvent(EntityDamageEvent e) {
 		if(e.getEntity() instanceof Player) {
 			if(((Player)e.getEntity()) == this.plugin.participant) {
-				//light up led here
+				this.plugin.led.flicker();
 			}
 		}
 	}
